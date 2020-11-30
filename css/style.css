@@ -16,10 +16,11 @@ html, body {
 	padding: 0;
 	background-color: #011909;
 	font-family: 'Montserrat', sans-serif;
+	background-image: url("glitch-effect.gif");
 }
 header {
     display: flex;
-    background-color: white;
+    background-image: linear-gradient(gray, black);
     color: black;
     justify-content: space-between;
 }
@@ -43,7 +44,7 @@ header ul li a:hover {
 	border-radius: 5px;
 }
 
-#featured-image, p{
+#items-wrapper{
 	text-align: center;
 }
 
@@ -97,4 +98,13 @@ footer {
     text-align: center;
 	font-size: 1rem;
 	height: 100px;
+}
+
+#items{
+	display: flex;
+	overflow-x: auto;
+}
+
+.item{
+	flex: none;
 }
