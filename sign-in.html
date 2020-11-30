@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="sign-in-page" class="modal">
+        <form name="sign-in-form" action="recebe.php" method="GET">
+            <div id="user-sign-in">
+                <label for="user">Usuario</label><br>
+                <input type="text" placeholder="usuario">
+            </div>
+
+            <div>
+                <label for="password-sign-in">Senha</label><br>
+                <input type="password" placeholder="password" pattern=".{6,}"
+                    title="Senha precisa ter mais de 6 caracteres"><br>
+            </div>
+
+            <div>
+                <button type="submit">Entrar</button><br>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>

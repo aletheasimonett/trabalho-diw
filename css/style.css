@@ -1,0 +1,100 @@
+#container {
+	/*Define a largura mínima do container*/
+	min-width: 600px;
+	/*Define a largura máxima do container*/
+	max-width: 960px;
+	/*Define a cor de fundo*/
+	background-color: #c1adc4;
+	/*Essa propriedade vai centralizar este elemento*/
+	/*0 de espaçamento top e bottom*/
+	/*mesmo espaçamento de margin nas laterais - calculo automático*/
+	margin: 0 auto;
+}
+
+html, body {
+    margin: 0;
+	padding: 0;
+	background-color: #011909;
+	font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: flex;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+header ul li {
+    margin: 0px;
+}
+header ul li a {
+    padding: 5px;
+    margin: 20px;
+    color: purple;
+	text-decoration: none;
+}
+
+header ul li a:hover {
+    border: solid 1px black;
+	border-radius: 5px;
+}
+
+#featured-image, p{
+	text-align: center;
+}
+
+.filme-cartaz-list{
+	text-align: center;
+}
+
+.filme-cartaz-content, .catalogo-filmes-content {
+	margin: 30px;
+}
+
+.catalogo-filmes-list{
+	text-align: center;
+}
+
+
+.filme-cartaz-list-item{
+	display: inline-block;
+	text-align: center;
+}
+
+.catalogo-filmes-list-item{
+	display: inline-block;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+.redes-sociais-list-item{
+	display: inline-block;
+	text-align: center;
+	height: 20px;
+}
+
+.redes-sociais-list-item div{
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.redes-sociais-list-item img {
+    max-width: 1rem;
+    max-height: 1rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+	font-size: 1rem;
+	height: 100px;
+}
