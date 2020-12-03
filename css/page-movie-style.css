@@ -1,3 +1,7 @@
+/**
+ * CONFIGURAÇÃO DOS ELEMENTOS DA PAGINA DO FILME
+ */
+
 .info-filmes-list{
     justify-content: center;
 }
@@ -5,7 +9,7 @@
 .poster-filme{
     display: flex;
     color: #fff;
-    margin: 60px;
+    margin: 80px;
     margin-top: 100px;
 }
 
@@ -23,13 +27,13 @@
 #infos-descricao-filme p{
     color: #789;
     font-weight: 400;
-    font-size: .92307692rem;
+    font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: .075em;
+    letter-spacing: 1px;
     position: relative;
     top: 3px;
     background-color: #14181c;
-    padding-right: .2em;
+    padding-right: 3px;
     margin: 14px 0 12px;
 }
 
@@ -51,12 +55,13 @@
     margin: 10px;
     width: 100px;
     height: 152px;
-	border-radius: 3px;
+    border-radius: 3px;
+    transition: .2s linear;
 }
 
 .cast-content img:hover{
 	transform: scale(1.2);
-	transition: transform .6s;
+	transition: transform .4s;
 }
 
 .cast-content figcaption{
@@ -67,8 +72,8 @@
 .sinopse-filme{
     margin: 60px;
     color: #789;
-    font-size: .92307692rem;
-    letter-spacing: .075em;
+    font-size: 16px;
+    letter-spacing: 1px;
     text-align: justify;
 }
 
@@ -85,12 +90,27 @@
     margin: 80px;
     font-family: Graphik-Regular-Web,sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 16px;
     color: #9ab;
-    letter-spacing: .075em;
-    margin-bottom: .76923077rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
     padding-bottom: 5px;
     border-bottom: 1px solid #456;
+    list-style: none;
+}
+
+.comentario {
+    text-align: left;
+}
+
+.comentario .title {
+    display: inline;
+    position: relative;
+}
+
+.comentario .text {
+    display: block;
+    position: relative;
 }
 
 .usuario-1-list{

@@ -1,47 +1,12 @@
-#container {
-	/*Define a largura mínima do container*/
-	min-width: 600px;
-	/*Define a largura máxima do container*/
-	max-width: 960px;
-	/*Define a cor de fundo*/
-	background-image: linear-gradient(to top, rgba(15, 15, 15,1), rgba(15,15,15,1));
-	/*Essa propriedade vai centralizar este elemento*/
-	/*0 de espaçamento top e bottom*/
-	/*mesmo espaçamento de margin nas laterais - calculo automático*/
-	margin: 0 auto;
-	height: 1500px;
-}
-
-/* CONFIGURAÇÃO DOS ELEMENTOS DO LOGOTIPO*/
-#logo{
-	display: flex;
-}
-
-#logo div img{
-	width: 100%;
-	height: 100%;
-	align-self: center;
-}
-
-#logo-img{
-	margin: 3px;
-	padding: 3px;
-	width: 150px;
-	height: 90px;
-}
-
-#logo-texto{
-	width: 150px;
-	height: 100px;
-}
-
+/**
+ * CONFIGURAÇÃO BASE DO SITE
+ */
 
 html, body {
     margin: 0;
 	padding: 0;
-	background-color: #fff;
 	font-family: Graphik-Regular-Web,sans-serif;
-	background-image: url("glitch-effect.gif");
+	background-image: url("../img/background/glitch-effect.gif");
 	display: grid;
 	place-items: center;
 }
@@ -49,14 +14,14 @@ html, body {
 /*CONFIGURAÇÃO DOS ELEMENTOS DO HEADER*/
 header {
     display: flex;
-	background-image: linear-gradient(to top, rgba(15, 15, 15,1), rgba(15,15,15,0.3));
+	background-image: linear-gradient(to top, rgba(15, 15, 15,1), rgba(156, 92, 92, 0.3));
 	width: 960px;
 	height: 100px;
 	justify-content: space-between;
 }
 header ul {
     display: flex;
-	text-align: left;  /*align-items: left;*/
+	text-align: left;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -83,6 +48,38 @@ header ul li a:hover {
 	border-radius: 5px;
 }
 
+/*CONFIGURAÇÃO DOS ELEMENTOS DO LOGOTIPO*/
+.logo{
+	display: flex;
+}
+
+.logo div img{
+	width: 100%;
+	height: 100%;
+	align-self: center;
+}
+
+#logo-img{
+	margin: 3px;
+	padding: 3px;
+	width: 150px;
+	height: 90px;
+}
+
+#logo-text{
+	width: 150px;
+	height: 100px;
+}
+
+/* CONFIGURAÇÃO DOS ELEMENTOS DO CONTAINER*/
+#container {
+	min-width: 600px;
+	max-width: 960px;
+	background-image: linear-gradient(to top, rgba(15, 15, 15,1), rgba(15,15,15,1));
+	margin: 0 auto;
+	height: 1500px;
+}
+
 /*CONFIGURAÇÃO DOS ELEMENTOS DOS LANÇAMENTOS*/
 .filme-cartaz-list{
 	text-align: center;
@@ -97,12 +94,13 @@ header ul li a:hover {
 .filme-cartaz-content img, .catalogo-filmes-content img{
 	border: solid 1px white;
 	border-radius: 3px;
+	transition: 0.2s linear;
 }
 
 .filme-cartaz-content:hover img, .catalogo-filmes-content:hover img{
 	border: solid 3px rgb(126, 49, 126);
 	transform: scale(1.2);
-	transition: transform .6s;
+	transition: transform .4s;
 }
 
 .filme-cartaz-content:hover p, .catalogo-filmes-content:hover p{
@@ -129,7 +127,7 @@ h2{
 	text-align: center;
 }
 
-/*CONFIGURAÇÃO DOS ELEMENTOS DO FOOTER- REDES SOCIAIS*/
+/*CONFIGURAÇÃO DOS ELEMENTOS DO FOOTER - REDES SOCIAIS*/
 .redes-sociais-list-item{
 	display: inline-block;
 	text-align: center;
@@ -139,12 +137,12 @@ h2{
 .redes-sociais-list-item div{
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 32px; /*2rem*/
 }
 
 .redes-sociais-list-item img {
-    max-width: 1rem;
-    max-height: 1rem;
+    max-width: 16px; /*1rem*/
+    max-height: 16px; /*1rem*/
 }
 
 /*CONFIGURAÇÃO DOS ELEMENTOS DO FOOTER*/
