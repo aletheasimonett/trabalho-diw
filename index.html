@@ -6,126 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="print.css" type="text/css" media="print">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modal-sign-in.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+    <link rel="stylesheet" href="css/carousel-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@600&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
     <title>Besouro suco</title>
 </head>
 
 <body>
-    <section id="container">
-        <header>
-            <div id="logo">
-                <img src="img/logo/besouro-suco-logo.png" alt="beetlejuice-logo" style="width: 100px;">
+
+    <header>
+
+        <div id="logo">
+            <div id="logo-img">
+                <img src="img/logo/besouro-suco-img.png" alt="beetlejuice-logo">
             </div>
+            <div id="logo-texto">
+                <img src="img/logo/besouro-suco-logo.png" alt="beetlejuice-logo">
+            </div>
+        </div>
 
-            <div id="acesso">
-                <ul>
-                    <li>
-                        <a href="#popup" class="btn">Entrar</a>
-                        <div id="popup" class="popup">
-                            <a href="#" class="close">&times;</a>
-                            <h2>Entrar</h2>
 
-                            <section class="sign-in-page">
+        <div id="acesso">
+            <ul>
+                <li>
+                    <a href="#entrar" class="btn">Entrar</a>
+                    <div class="modal-entrar" id="entrar">
+                        <div class="modal-corpo">
+                            <a href="#" class="fechar">X</a>
+                            <div class="form-sign-in">
                                 <form name="sign-in-form" action="recebe.php" method="GET">
-                                    <div id="user-sign-in">
+                                    <div id="info-sign-in">
                                         <label for="user">Usuario</label><br>
-                                        <input type="text" placeholder="usuario">
-                                    </div>
+                                        <input type="text" id="user" placeholder="usuario">
 
-                                    <div id="password-sign-in">
-                                        <label for="password-sign-in">Senha</label><br>
-                                        <input type="password" placeholder="password" pattern=".{6,}"
+                                        <label for="password">Senha</label><br>
+                                        <input type="text" id="password" placeholder="password" pattern=".{6,}"
                                             title="Senha precisa ter mais de 6 caracteres"><br>
                                     </div>
-
-                                    <div>
+                                    <div class="botao-entrar">
                                         <button type="submit">Entrar</button><br>
                                     </div>
                                 </form>
-                            </section>
+                            </div>
                         </div>
-                        <a href="#" class="close-popup"></a>
-                    </li>
-                    <li>
-                        <a href="#popup-2" class="btn-2">Inscreva-se</a>
-                        <div id="popup-2" class="popup-2">
-                            <a href="#" class="close-2">&times;</a>
-                            <h2>Inscreva-se</h2>
+                    </div>
+                </li>
 
-                            <section class="sign-up-page">
-                                <form name="subscription-form" action="envia.php" method="post">
+                <li>
+                    <a href="#cadastro" class="btn-2">Inscreva-se</a>
+                    <div class="modal-cadastro" id="cadastro">
+                        <div class="modal-corpo-cadastro">
+                            <a href="#" class="fechar">X</a>
+                            <div class="form-sign-up">
+                                <form name="sign-up-form" action="recebe.php" method="GET">
+                                    <div id="info-sign-up">
+                                        <label for="fname">Nome completo</label><br>
+                                        <input type="text" id="fname" name="fname"><br>
 
-                                    <label for="fname">Nome completo</label><br>
-                                    <input type="text" id="fname" name="fname"><br>
+                                        <label for="subscription-user">Usuario</label><br>
+                                        <input type="text" id="subscription-user" name="subscription-user"><br>
 
-                                    <label for="subscription-user">Usuario</label><br>
-                                    <input type="text" id="subscription-user" name="subscription-user"><br>
+                                        <label for="date">Data de Nascimento</label> <br>
+                                        <input type="date" id="date" name="subscription-user"><br>
 
-                                    <label for="date">Data de Nascimento</label> <br>
-                                    <input type="date" id="date" name="subscription-user"><br>
+                                        <label for="email">email</label> <br>
+                                        <input type="text" id="email" name="email"><br>
 
-                                    <label for="email">email</label> <br>
-                                    <input type="email" id="email" name="email"><br>
-
-                                    <label for="subscription-password">Senha</label><br>
-                                    <input type="subscription-password" id="subscription-password"
-                                        name="subscription-password"><br>
-
-                                    <button type="submit">Entrar</button>
+                                        <label for="subscription-password">Senha</label><br>
+                                        <input type="text" id="subscription-password"
+                                            name="subscription-password"><br>
+                                    </div>
+                                    <div class="botao-confirmar">
+                                        <button type="submit">confirmar</button><br>
+                                    </div>
                                 </form>
-                            </section>
+                            </div>
                         </div>
-                        <a href="#" class="close-popup-2"></a>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section id="container">
+        <div class="carousel">
+            <input type="radio" id="1" name="activator" checked="checked" class="carousel-activator" />
+            <input type="radio" id="2" name="activator" class="carousel-activator" />
+            <input type="radio" id="3" name="activator" class="carousel-activator" />
+            <div class="carousel-controls">
+                <label for="2" class="carousel-control carousel-control-forward"></label>
+                <label for="3" class="carousel-control carousel-control-backward"></label>
             </div>
-        </header>
-
-        <!--
-    <nav>
-        <ul>
-            <li id="about-link-page"><a href="about.html" target="_blank">Quem Somos</a></li>
-            <li id="movies-link-page"><a href="page-movies.html" target="_blank">Filmes</a></li>
-        </ul>
-    </nav>
-    -->
-
-        <div id="items-wrapper">
-            <div id="items">
-                <div class="item"><img src="img/movies/netflix.png" alt="Filme Netflix" style="width: 400px;"></div>
-                <div class="item"><img src="img/movies/netflix.png" alt="Filme Netflix" style="width: 400px;"></div>
-                <div class="item"><img src="img/movies/netflix.png" alt="Filme Netflix" style="width: 400px;"></div>
-                <div class="item"><img src="img/movies/netflix.png" alt="Filme Netflix" style="width: 400px;"></div>
+            <div class="carousel-controls">
+                <label for="3" class="carousel-control carousel-control-forward"></label>
+                <label for="1" class="carousel-control carousel-control-backward"></label>
+            </div>
+            <div class="carousel-controls">
+                <label for="1" class="carousel-control carousel-control-forward"></label>
+                <label for="2" class="carousel-control carousel-control-backward"></label>
+            </div>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="img/carousel/joaphin-phoniex.jpg" alt="Filme Netflix">
+                    <div class="text-area">
+                        <div class="title">Joaquin Phoneix pode estrelar novo filme de Ari Aster</div>
+                        <div class="text">Joaquin Phoneix (Coringa) está negociando sua participação no próximo longa do diretor Ari Aster,
+                             conhecido por dirigir filmes como Hereditário e Midsommar. O longa intitulado Beau is Afraid,
+                             é descrito como um filme de terror surrealista que passára em um presente alternativo.</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/carousel/jordan-peele.png" alt="Filme Netflix">
+                    <div class="text-area">
+                        <div class="title">Novo filme de Jordan Peele tem sua data de estreia revelada</div>
+                        <div class="text">Universal anunciou data de escreia de novo filme do diretor Jordan Peele,
+                            conhecido por dirigir os filmes Corra e Nós. O filme chega as cinemas em julho de 2022,
+                            até o momento não se sabe muitas informações sobre o longa.</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/carousel/halloween-teaser.jpg" alt="Filme Netflix">
+                    <div class="text-area">
+                        <div class="title">Halloween Kills tem seu primeiro teaser revelado</div>
+                        <div class="text">O novo filme da franquia Halloween teve seu primeiro teaser revelado,
+                        o filme se passa anos depois do longa original, contará com uma de suas principais
+                        protagonistas Laurie, interpretada por Jamie Lee Curtis. Halloween Kills teve sua data de estreia adiada para 2021 por conta da pandemia.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <label for="1" class="carousel-indicator"></label>
+                <label for="2" class="carousel-indicator"></label>
+                <label for="3" class="carousel-indicator"></label>
             </div>
         </div>
 
         <section id="filmes-cartaz">
             <div>
-                <h2>Filmes em cartaz</h2>
+                <h2>Lançamentos</h2>
                 <ul class="filme-cartaz-list">
                     <li class="filme-cartaz-list-item">
                         <div class="filme-cartaz-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
+                            <img src="img/movies/vozes.jpg" alt="poster-filme-vozes"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Vozes - Disponível em Netflix</p>
                         </div>
                     </li>
 
                     <li class="filme-cartaz-list-item">
                         <div class="filme-cartaz-content">
-                            <img src="img/movies/jaws-poster.png" alt="poster-filme-tubarao"
+                            <img src="img/movies/his-house.jpg" alt="poster-filme-his-house"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>O que ficou para trás - Disponível em Netflix</p>
                         </div>
                     </li>
 
                     <li class="filme-cartaz-list-item">
                         <div class="filme-cartaz-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
+                            <img src="img/movies/fuja.jpeg" alt="poster-filme-halloween"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Fuja</p>
                         </div>
                     </li>
                 </ul>
@@ -138,94 +179,94 @@
                 <ul class="catalogo-filmes-list">
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/jaws-poster.png" alt="poster-filme-tubarao"
+                            <img src="img/movies/babadook-movie.jpg" alt="poster-filme-tubarao"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>O Babadook - 2014</p>
                         </div>
                     </li>
 
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
+                            <img src="img/movies/get-out-movie.jpg" alt="poster-filme-halloween"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Corra! - 2017</p>
                         </div>
                     </li>
 
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/jaws-poster.png" alt="poster-filme-tubarao"
+                            <img src="img/movies/hereditario.jpeg" alt="poster-filme-tubarao"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Hereditário - 2018</p>
                         </div>
                     </li>
 
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
+                            <img src="img/movies/nós.jpeg" alt="poster-filme-halloween"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Nós - 2019</p>
                         </div>
                     </li>
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/jaws-poster.png" alt="poster-filme-tubarao"
+                            <img src="img/movies/midsommar.jpeg" alt="poster-filme-tubarao"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
-                        </div>
-                    </li>
-
-                    <li class="catalogo-filmes-list-item">
-                        <div class="catalogo-filmes-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
-                                style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <a href="page.movie.html" target="_blank"><p>Midsommar - 2019</p></a>
                         </div>
                     </li>
 
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/jaws-poster.png" alt="poster-filme-tubarao"
+                            <img src="img/movies/screem.jpeg" alt="poster-filme-halloween"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>Pânico 4 - 2011</p>
                         </div>
                     </li>
 
                     <li class="catalogo-filmes-list-item">
                         <div class="catalogo-filmes-content">
-                            <img src="img/movies/halloween-poster.png" alt="poster-filme-halloween"
+                            <img src="img/movies/o-farol.jpg" alt="poster-filme-tubarao"
                                 style="width: 108px; margin-right: 10px;">
-                            <p>Descrição do filme</p>
+                            <p>O Farol - 2019</p>
+                        </div>
+                    </li>
+
+                    <li class="catalogo-filmes-list-item">
+                        <div class="catalogo-filmes-content">
+                            <img src="img/movies/anabelle-3.jpg" alt="poster-filme-halloween"
+                                style="width: 108px; margin-right: 10px;">
+                            <p>Anabelle 3 - 2019</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-
-        <footer>
-            <ul class="redes-sociais-list">
-                <li class="redes-sociais-list-item">
-                    <div class="footer-infos">
-                        <p>Para mais informações entre em contato pelo email contato@besourosuco.com</p>
-                    </div>
-                </li>
-
-                <li class="redes-sociais-list-item">
-                    <div class="redes-sociais-content">
-                        <img src="img/redes-sociais/twitter.png" alt="icone-do-twitter">
-                        <p>/besouro.suco</p>
-                    </div>
-                </li>
-
-                <li class="redes-sociais-list-item">
-                    <div class="redes-sociais-content">
-                        <img src="img/redes-sociais/facebook.png" alt="icone-do-facebook">
-                        <p>/besouro.suco</p>
-                    </div>
-                </li>
-            </ul>
-        </footer>
     </section>
+    <footer>
+        <ul class="redes-sociais-list">
+            <li class="redes-sociais-list-item">
+                <div class="footer-infos">
+                    <p>Para mais informações entre em contato pelo email contato@besourosuco.com</p>
+                </div>
+            </li>
+
+            <li class="redes-sociais-list-item">
+                <div class="redes-sociais-content">
+                    <img src="img/redes-sociais/twitter.png" alt="icone-do-twitter">
+                    <p>/besouro.suco</p>
+                </div>
+            </li>
+
+            <li class="redes-sociais-list-item">
+                <div class="redes-sociais-content">
+                    <img src="img/redes-sociais/facebook.png" alt="icone-do-facebook">
+                    <p>/besouro.suco</p>
+                </div>
+            </li>
+        </ul>
+    </footer>
+
 </body>
 
 </html>

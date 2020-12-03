@@ -1,0 +1,47 @@
+.rating, .usuario-1-item {
+    display: flex;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+.rating input, .usuario-1-item input {
+    display: none;
+}
+.rating label, .usuario-1-item label{
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.rating label::before, .usuario-1-item labek::before{
+    content: ' ';
+    background-image: url("../img/knife.png");
+    height: 32px;
+    width: 32px;
+    position: relative;
+    display: block;
+    filter: grayscale(100%);
+    opacity: .3;
+}
+.rating label::after, .usuario-1-item::after {
+    content: ' ';
+    background-image: url("../img/knife.png");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    display: block;
+    top: 0;
+    filter: none;
+    opacity: 0;
+    transition: .5s;
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after, .usuario-1-item:hover:after,
+.usuario-1-item:hover ~ label:after {
+    filter: saturate(5);
+    opacity: 1;
+    transition: .5s;
+}
+.rating input:checked ~ label:after, .usuario-1-item input:checked ~ label:after {
+    opacity: 1;
+    transition: .5s;
+}

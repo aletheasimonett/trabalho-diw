@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+    <link rel="stylesheet" href="css/page-movie-style.css">
+    <link rel="stylesheet" href="css/rating-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <title>Besouro suco</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logo">
+            <div id="logo-img">
+                <img src="img/logo/besouro-suco-img.png" alt="beetlejuice-logo">
+            </div>
+            <div id="logo-texto">
+                <img src="img/logo/besouro-suco-logo.png" alt="beetlejuice-logo">
+            </div>
+        </div>
+
+
+        <div id="acesso">
+            <ul>
+                <li>
+                    <a href="#entrar" class="btn">Entrar</a>
+                    <div class="modal-entrar" id="entrar">
+                        <div class="modal-corpo">
+                            <a href="#" class="fechar">X</a>
+                            <div class="form-sign-in">
+                                <form name="sign-in-form" action="recebe.php" method="GET">
+                                    <div id="info-sign-in">
+                                        <label for="user">Usuario</label><br>
+                                        <input type="text" id="user" placeholder="usuario">
+
+                                        <label for="password-sign-in">Senha</label><br>
+                                        <input type="text" id="password-sign-in" placeholder="password" pattern=".{6,}"
+                                            title="Senha precisa ter mais de 6 caracteres"><br>
+                                    </div>
+                                    <div class="botao-entrar">
+                                        <button type="submit">Entrar</button><br>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#cadastro" class="btn-2">Inscreva-se</a>
+                    <div class="modal-cadastro" id="cadastro">
+                        <div class="modal-corpo-cadastro">
+                            <a href="#" class="fechar">X</a>
+                            <div class="form-sign-up">
+                                <form name="sign-up-form" action="recebe.php" method="GET">
+                                    <div id="info-sign-up">
+                                        <label for="fname">Nome completo</label><br>
+                                        <input type="text" id="fname" name="fname"><br>
+
+                                        <label for="subscription-user">Usuario</label><br>
+                                        <input type="text" id="subscription-user" name="subscription-user"><br>
+
+                                        <label for="date">Data de Nascimento</label> <br>
+                                        <input type="date" id="date" name="subscription-user"><br>
+
+                                        <label for="email">email</label> <br>
+                                        <input type="email" id="email" name="email"><br>
+
+                                        <label for="subscription-password">Senha</label><br>
+                                        <input type="text" id="subscription-password" name="subscription-password"><br>
+                                    </div>
+                                    <div class="botao-confirmar">
+                                        <button type="submit">confirmar</button><br>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section id="container">
+        <div class="info-filme-list">
+            <div class=" poster-filme">
+                <img src="img/movies/midsommar.jpeg" alt="poster-filme-tubarao">
+                <div class="descricao-tecnica">
+                    <div id="titulo-descricao-tecnica">
+                        <h4>Midsommar</h4>
+                    </div>
+                    <div id="infos-descricao-filme">
+                        <p>Direção: Ari Aster</p>
+                        <p>Data de Estreia no Brasil: 19/09/2019</p>
+                        <p>Duração: 147 minutos</p>
+                        <p>Classificação: 18 anos</p>
+                        <p>Distribuição: Paris Filmes</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sinopse-filme">
+            <div id="titulo-sinopse-filme">
+                <h2>Sinopse</h2>
+            </div>
+            <p>Vários amigos viajam para a Suécia para estudar como antropólogos um festival de verão que é
+                realizado a cada noventa anos na remota cidade natal de um deles. O que começa como umas férias de
+                sonho em um lugar onde o sol nunca se põe, gradualmente se transforma em um pesadelo sombrio à
+                medida que os habitantes misteriosos os convidam a participar de suas atividades festivas
+                perturbadoras.
+            </p>
+        </div>
+
+        <div class="cast">
+            <h2>Elenco</h2>
+            <ul class="cast-list">
+                <li class="cast-item">
+                    <div class="cast-content">
+                        <figure>
+                            <img src="img/page-movie/florence-pugh.jpg" alt="foto-florence-pugh">
+                            <figcaption>Florence Pugh</figcaption>
+                        </figure>
+                    </div>
+
+                </li>
+                <li class="cast-item">
+                    <div class="cast-content">
+                        <figure>
+                            <img src="img/page-movie/jack-reynor.jpg" alt="foto-jack-reynor">
+                            <figcaption>Jack Reynor</figcaption>
+                        </figure>
+                    </div>
+                </li>
+                <li class="cast-item">
+                    <div class="cast-content">
+                        <figure>
+                            <img src="img/page-movie/willian-j-harper.jpg" alt="foto-willian-j-harper">
+                            <figcaption>Willian J. Harper</figcaption>
+                        </figure>
+
+                    </div>
+                </li>
+                <li class="cast-item">
+                    <div class="cast-content">
+                        <figure>
+                            <img src="img/page-movie/will-poulter.jpg" alt="foto-will-poulter">
+                            <figcaption>Will Poulter</figcaption>
+                        </figure>
+
+                    </div>
+                </li>
+            </ul>
+            <div class="comentarios">
+                <div class="usuario-1">
+                    <ul class="usuario-1-list">
+                        <li class="usuario-1-item-titulo">
+                            <p><a href=""> Usuario 1</a>   Data:03.12.2020 Nota:</p><br>
+                            <p>Comentário: Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laudantium nisi non consequuntur illum</p>
+                        </li>
+                    </ul>
+
+                    <ul class="usuario-1-list">
+                        <li class="usuario-1-item-titulo">
+                            <p><a href=""> Usuario 2</a>  Data:02.12.2020 Nota:</p><br>
+                            <p>Comentário: Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laudantium nisi non consequuntur illum</p>
+                        </li>
+                    </ul>
+
+                    <ul class="usuario-1-list">
+                        <li class="usuario-1-item-titulo">
+                            <p><a href=""> Usuario 3</a>    Data:01.12.2020 Nota:</p><br>
+                            <p>Comentário: Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laudantium nisi non consequuntur illum</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--<div class="avaliacao-filme">
+                <div id="titulo-avaliacao-filme">
+                    <h4>Avaliações</h4>
+                    <div class="rating">
+                        <input type="radio" name="rate" id="rate5">
+                        <label for="rate5"></label>
+                        <input type="radio" name="rate" id="rate4">
+                        <label for="rate4"></label>
+                        <input type="radio" name="rate" id="rate3">
+                        <label for="rate3"></label>
+                        <input type="radio" name="rate" id="rate2">
+                        <label for="rate2"></label>
+                        <input type="radio" name="rate" id="rate1">
+                        <label for="rate1"></label>
+                    </div>
+                </div>-->
+        </div>
+    </section>
+    <footer>
+        <ul class="redes-sociais-list">
+            <li class="redes-sociais-list-item">
+                <div class="footer-infos">
+                    <p>Para mais informações entre em contato pelo email contato@besourosuco.com</p>
+                </div>
+            </li>
+
+            <li class="redes-sociais-list-item">
+                <div class="redes-sociais-content">
+                    <img src="img/redes-sociais/twitter.png" alt="icone-do-twitter">
+                    <p>/besouro.suco</p>
+                </div>
+            </li>
+
+            <li class="redes-sociais-list-item">
+                <div class="redes-sociais-content">
+                    <img src="img/redes-sociais/facebook.png" alt="icone-do-facebook">
+                    <p>/besouro.suco</p>
+                </div>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

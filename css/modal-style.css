@@ -1,0 +1,94 @@
+a {
+   color: #fff;
+   text-decoration: none;
+   justify-content: center;
+   font-family: Graphik-Regular-Web,sans-serif;
+}
+
+/*Ajuste visibilidade modal*/
+.modal-entrar, .modal-cadastro{
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility .6s, opacity .5s ;
+}
+
+/*Ajuste modal para ficar visivel*/
+.modal-entrar:target, .modal-cadastro:target{
+   visibility: visible;
+   opacity: 1;
+}
+
+
+/*Irá estilizar todo nosso botão 'Abrir'*/
+.btn, .btn-2 {
+   display: inline-block;
+   margin:10px;
+   padding: 2px 20px;
+   border: 2px solid #fff;
+   border-radius: 0.5em;
+   background-color: transparent;
+   transition: .3s;
+}
+
+/*Irá estilizar o botão quando o mouse passa por cima dele*/
+.btn:hover, .btn-2:hover{
+   background-color: #fff;
+   opacity: .6;
+   color: #222;
+}
+
+/*estilizando o fundo de fora da minha modal*/
+.modal-entrar, .modal-cadastro{
+   position: fixed;
+   left:0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 5;
+   background: rgba(0,0,0,.9)
+}
+
+/*estilizando minha modal*/
+.modal-corpo, .modal-corpo-cadastro{
+   margin: 300px auto; /*cria um espaço ao redor do elemento de 100px e o auto faz com que o proprio browser calcule isso (normalmente vai centralizar), fora de qualquer borda definida*/
+   width: 300px; /*vai pegar 300px da largura*/
+   padding: 4px; /*ajusta o preenchimento da modal*/
+   position: relative;
+   border-radius: 5px;
+   /*background-color: #a4508b; /*dando cor de fundo ao meu modal-corpo*/
+   /*background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);*/
+   /*background: linear-gradient(to right, #4b8f32 0%, #744958 100%);*/
+   color: #fff; /*dando cor a font*/
+   /*background-color: #a4508b;*/
+   background-image: url("fundo-modal-sign-in.jpg");
+}
+
+.modal-entrar .fechar:hover, .modal-cadastro .fechar:hover {
+   color: #000;
+}
+
+.fechar{
+   font-size: 25px; /*alterando tamanho da minha fonte*/
+   position: absolute; /*se posiciona de acordo com o elemento acima dele, nesse caso o .modal-corpo */
+   right: 5px; /*desloca meu elemento para direita*/
+   top: 2px;
+   padding: 4.5px; /*ajustei o preenchimento do fechar*/
+   text-decoration: none; /*tirando decoração do texto*/
+   color:#fff; /*dando cor a font*/
+}
+
+.form-sign-in, .form-sign-up{
+   padding: 30px; /*deixando o preenchimento do meu texto com 30px*/
+   font-size: 20px;
+   text-align: center;
+}
+
+/*criando margem entre as opções do meu form*/
+#info-sign-in, .botao-entrar, #info-sign-up, .botao-confirmar{
+   margin: 10px;
+}
+
+#info-sign-in input, #info-sign-up input{
+   border-radius: 5px;
+}
+
