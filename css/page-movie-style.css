@@ -2,7 +2,7 @@
  * CONFIGURAÇÃO DOS ELEMENTOS DA PAGINA DO FILME
  */
 
-.info-filmes-list{
+.info-filmes{
     justify-content: center;
 }
 
@@ -77,16 +77,12 @@
     text-align: justify;
 }
 
-.avaliacao-filme{
-    display: flex;
-    margin: 60px;
-}
-
 .cast{
     margin-top: 10px;  
 }
 
 .comentarios{
+    display: flex;
     margin: 80px;
     font-family: Graphik-Regular-Web,sans-serif;
     font-weight: 400;
@@ -99,33 +95,11 @@
     list-style: none;
 }
 
-.comentario {
-    text-align: left;
-}
-
-.comentario .title {
-    display: inline;
-    position: relative;
-}
-
-.comentario .text {
-    display: block;
-    position: relative;
-}
-
-.usuario-1-list{
-    display: flex;
-    text-align: left;
+.usuario-list{
     list-style: none;
 }
 
-.usuario-1-item{
-    display: flex;
-    text-align: left;
-    list-style: none;  
-}
-
-.usuario-1-item-titulo{
+.usuario-list-item{
     font-size: 15px;
 }
 

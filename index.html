@@ -26,7 +26,7 @@
         </div>
 
 
-        <div id="acesso">
+        <nav id="acesso">
             <ul>
                 <li>
                     <a href="#entrar" class="btn">Entrar</a>
@@ -39,8 +39,8 @@
                                         <label for="user">Usuario</label><br>
                                         <input type="text" id="user" placeholder="usuario">
 
-                                        <label for="password">Senha</label><br>
-                                        <input type="text" id="password" placeholder="password" pattern=".{6,}"
+                                        <label for="pass">Senha</label><br>
+                                        <input type="password" id="pass" placeholder="senha" pattern=".{6,}"
                                             title="Senha precisa ter mais de 6 caracteres"><br>
                                     </div>
                                     <div class="botao-entrar">
@@ -61,20 +61,19 @@
                                 <form name="cadastro-form" action="recebe.php" method="GET">
                                     <div id="info-cadastro">
                                         <label for="fname">Nome completo</label><br>
-                                        <input type="text" id="fname" name="fname"><br>
+                                        <input type="text" id="fname"><br>
 
                                         <label for="subscription-user">Usuario</label><br>
-                                        <input type="text" id="subscription-user" name="subscription-user"><br>
+                                        <input type="text" id="subscription-user"><br>
 
                                         <label for="date">Data de Nascimento</label> <br>
-                                        <input type="date" id="date" name="subscription-user"><br>
+                                        <input type="date" id="date"><br>
 
                                         <label for="email">email</label> <br>
-                                        <input type="text" id="email" name="email"><br>
+                                        <input type="email" id="email"><br>
 
-                                        <label for="subscription-password">Senha</label><br>
-                                        <input type="text" id="subscription-password"
-                                            name="subscription-password"><br>
+                                        <label for="pass">Senha</label><br>
+                                        <input type="password" id="pass"><br>
                                     </div>
                                     <div class="botao-confirmar">
                                         <button type="submit">confirmar</button><br>
@@ -85,7 +84,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
     <section id="container">
         <div class="carousel">
@@ -109,9 +108,11 @@
                     <img src="img/carousel/joaphin-phoniex.jpg" alt="Filme Netflix">
                     <div class="text-area">
                         <div class="title">Joaquin Phoneix pode estrelar novo filme de Ari Aster</div>
-                        <div class="text">Joaquin Phoneix (Coringa) está negociando sua participação no próximo longa do diretor Ari Aster,
-                             conhecido por dirigir filmes como Hereditário e Midsommar. O longa intitulado Beau is Afraid,
-                             é descrito como um filme de terror surrealista que passára em um presente alternativo.</div>
+                        <div class="text">Joaquin Phoneix (Coringa) está negociando sua participação no próximo longa do
+                            diretor Ari Aster,
+                            conhecido por dirigir filmes como Hereditário e Midsommar. O longa intitulado Beau is
+                            Afraid,
+                            é descrito como um filme de terror surrealista que passára em um presente alternativo.</div>
                     </div>
                 </div>
                 <div class="carousel-slide">
@@ -128,8 +129,9 @@
                     <div class="text-area">
                         <div class="title">Halloween Kills tem seu primeiro teaser revelado</div>
                         <div class="text">O novo filme da franquia Halloween teve seu primeiro teaser revelado,
-                        o filme se passa anos depois do longa original, contará com uma de suas principais
-                        protagonistas Laurie, interpretada por Jamie Lee Curtis. Halloween Kills teve sua data de estreia adiada para 2021 por conta da pandemia.</div>
+                            o filme se passa anos depois do longa original, contará com uma de suas principais
+                            protagonistas Laurie, interpretada por Jamie Lee Curtis. Halloween Kills teve sua data de
+                            estreia adiada para 2021 por conta da pandemia.</div>
                     </div>
                 </div>
             </div>
@@ -210,7 +212,7 @@
                         <div class="catalogo-filmes-content">
                             <a href="page-movie.html" target="_blank">
                                 <img src="img/movies/midsommar.jpeg" alt="poster-filme-midsommar"
-                                style="width: 108px; margin-right: 10px;">
+                                    style="width: 108px; margin-right: 10px;">
                                 <p>Midsommar - 2019</p>
                             </a>
                         </div>
@@ -252,17 +254,21 @@
             </li>
 
             <li class="redes-sociais-list-item">
-                <div class="redes-sociais-content">
-                    <img src="img/social-media/twitter-icon.png" alt="icone-do-twitter">
-                    <p>/besouro.suco</p>
-                </div>
+                <a href="https://twitter.com/" target="_blank">
+                    <div class="redes-sociais-content">
+                        <img src="img/social-media/twitter-icon.png" alt="icone-do-twitter">
+                        <p>/besouro.suco</p>
+                    </div>
+                </a>
             </li>
 
             <li class="redes-sociais-list-item">
-                <div class="redes-sociais-content">
-                    <img src="img/social-media/facebook-icon.png" alt="icone-do-facebook">
-                    <p>/besouro.suco</p>
-                </div>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <div class="redes-sociais-content">
+                        <img src="img/social-media/facebook-icon.png" alt="icone-do-facebook">
+                        <p>/besouro.suco</p>
+                    </div>
+                </a>
             </li>
         </ul>
     </footer>
